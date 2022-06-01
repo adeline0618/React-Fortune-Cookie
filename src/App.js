@@ -1,22 +1,16 @@
-import logo from './logo.svg';
+import logo from './f1.png';
 import './App.css';
+import proverb from './proverbs';
 
 function App() {
+  const randomIndex = length => {
+    return parseInt(Math.random() * length);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <header className='App-header'>
+        <img src={logo} className='App-logo' alt='logo' />
+        <p>{proverb[randomIndex(proverb.length)]}</p>
       </header>
     </div>
   );
